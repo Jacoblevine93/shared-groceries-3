@@ -1,0 +1,25 @@
+[debug] [2019-02-10T21:03:51.251Z] ----------------------------------------------------------------------
+[debug] [2019-02-10T21:03:51.253Z] Command:       /usr/local/bin/node /Users/user/bloc/shared-groceries-3/node_modules/.bin/firebase serve
+[debug] [2019-02-10T21:03:51.254Z] CLI Version:   6.3.1
+[debug] [2019-02-10T21:03:51.254Z] Platform:      darwin
+[debug] [2019-02-10T21:03:51.254Z] Node Version:  v10.13.0
+[debug] [2019-02-10T21:03:51.255Z] Time:          Sun Feb 10 2019 14:03:51 GMT-0700 (Mountain Standard Time)
+[debug] [2019-02-10T21:03:51.255Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-10T21:03:51.265Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-10T21:03:51.265Z] > authorizing via signed-in user
+[debug] [2019-02-10T21:03:51.265Z] [iam] checking project shared-groceries for permissions ["firebase.projects.get"]
+[debug] [2019-02-10T21:03:51.267Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shared-groceries:testIamPermissions  
+
+[debug] [2019-02-10T21:03:51.650Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-10T21:03:51.653Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shared-groceries  
+ 
+[debug] [2019-02-10T21:03:52.004Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/user/bloc/shared-groceries-3'...
+[info] 
+[debug] [2019-02-10T21:03:52.007Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/271929805627/clients/_:getWebAppConfig  
+ 
+[debug] [2019-02-10T21:03:52.407Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000

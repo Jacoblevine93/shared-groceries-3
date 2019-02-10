@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Stack: Node - Firebase - React
 
-## Available Scripts
+Backend: Node (create-react-app)
+Frontend: React
+Authentication: Firebase
+Database: Firebase (realtime)
+Testing: Mock Data
+Hosting: Firebase
 
-In the project directory, you can run:
+Strategy:
 
-### `npm start`
+I originally tried to create the app w/ webpack/babel, but had some issues w/ configuration, and for sake of time switched to the create-react-app package. I chose to use Firebase for most of the functionality, as they have realtime sync on their database, and super easy authentication - plus it's free! For hosting, I went with Firebase as well - just for sake of simplicity, as well as compatibility. To test, I tested my site locally on the live production database, and manually deleted the data once done.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Issues:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Webpack/Babel - I would have really preferred to use webpack/babel as I think this is more efficient for live production, however it would have just had taken me too long to mess with. I also would have had to figure out how to connect it to Firebase hosting, which I wanted to avoid, again for sake of time.
 
-### `npm test`
+Firebase Database: I piggybacked heavily off the Bloc Chat app, however there were a variety of differences in functionality involving the database that I had to figure out.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Firebase Hosting:
 
-### `npm run build`
+1. Don't have access to root, so installed locally, and firebase CLI wouldn't work.
+2. Didn't understand how to build the app, and then add to firebase.json so site could launch.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Solutions:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Webpack/Babel - I didn't end up going w/ webpack/babel, however after hours in the docs and stackOverflow, I was able to setup the configuration. It appears they just recently updated the version, and this brought along a variety of changes to the syntax, whereas stackOverflow had a lot of outdated syntax. So I finally just looked up the documentation, and was able to surmise my configuration was correct.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Firebase Database: I just read the docs, and refrenced previous projects we had done.
 
-### `npm run eject`
+Firebase Hosting:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Realized I needed to use npx.
+2. Remembered job insight, where I just needed to run build and then direct Firebase to the static version of the site.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Future Problems to Solve:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- must re-render to show delete

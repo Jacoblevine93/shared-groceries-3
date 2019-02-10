@@ -1,0 +1,86 @@
+#message-list-section {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #cacaca;
+  vertical-align: bottom;
+}
+
+.pre-scrollable {
+  height: 100%!important;
+  max-height: 80%!important;
+  min-height: 80%!important;
+  padding: 0px;
+}
+
+
+
+.messages {
+  cursor: default;
+  display: block;
+  background-color: #f6f7fb;
+  border: 1px solid #ffffff;
+}
+
+h1 {
+  cursor: default;
+}
+
+.username {
+  text-align: left;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding: 10px 0px 0px 30px;
+}
+
+.message-content {
+  display: block;
+  color: #50505d;
+  text-align: left;
+  font-size: 13px;
+  padding: 0px 0px 10px 30px;
+}
+
+.timestamp {
+  color: #abb3bc;
+  text-align: right;
+  font-size: 13px;
+  padding: 10px 30px 0px 0px;
+}
+
+#submit-button {
+  background:    #4a4a4a;
+  border-radius: 0px;
+  width: 10%;
+  padding:       15px 25px;
+  color:         #e8edf0;
+  display:       inline;
+  font:          normal 700 20px/1 "Open Sans", sans-serif;
+  text-align:    center;
+  text-shadow:   1px 1px #000000;
+  height: 53px;
+  vertical-align: bottom;
+}
+
+#message-field {
+  width: 90%;
+  background-color: #f6f7fb;
+  vertical-align: bottom;
+  text-align: left;
+  padding: 0px 0px 0px 20px;
+  border-radius: 0px;
+  border: 1px solid #cacaca;
+  display: inline;
+  height: 53px;
+}
+
+form {
+  width: 100%;
+  display: inline!important;
+}
+
+.form-inline {
+  left: 0%;
+  position: absolute;
+  bottom: 0px;
+}

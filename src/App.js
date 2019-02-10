@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase';
 import User from './components/User.js';
+import GroceryList from './components/GroceryList.js';
+import ButtonList from './components/ButtonList.js';
+
 
   var config = {
     apiKey: "AIzaSyAsAloEkOWRRI644pZs1af4DgagqGKx5zg",
@@ -17,15 +20,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeRoom: 'Room 1',
+      activeItem: 'carrots',
       username: 'Guest'
 
     };
   }
 
-  setActiveRoom=(room)=> {
-    console.log(room.key)
-    this.setState({activeRoom: room});
+  setActiveItem=(item)=> {
+    console.log(item.key)
+    this.setState({activeItem: item});
   }
 
   setUser=(user)=> {
@@ -37,15 +40,25 @@ class App extends Component {
   render() {
     return (
       <div className="App container-fluid">
-        <div id="room-list-row" class="row">
-          <div class="col-lg-3 padding-0">
-            <User
-            setUser={this.setUser}
-            currentUser={this.state.username}
-            firebase={firebase}
-            />
+        <div id="item-list-row" class="row">
+        <div class="col-lg-3 padding-0">
+          <User
+          setUser={this.setUser}
+          currentUser={this.state.username}
+          firebase={firebase}
+          />
           </div>
           <div class="col-lg-9 padding-0">
+            <GroceryList
+            currentItem={this.state.activeItem}
+            setActiveItem={this.setActiveItem}
+            firebase={firebase}
+            />
+            <ButtonList
+            currentItem={this.state.activeItem}
+            firebase={firebase}
+            />
+
           </div>
         </div>
       </div>
