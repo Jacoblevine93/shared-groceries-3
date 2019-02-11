@@ -1,9 +1,6 @@
-#item-list-section {
-}
-
 #items {
   cursor: default;
-  text-align: left;
+  text-align: middle;
   padding-left: 20px;
   color: #9ea0a2;
 }

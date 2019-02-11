@@ -5,9 +5,7 @@ class User extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-
-    };
+    this.state = {};
 
   }
 
@@ -32,9 +30,9 @@ class User extends Component {
   render() {
     return (
       <section id="user-section">
-      <p> User: {this.displayUser(this.props.currentUser)}</p>
-      <button className="btn-sm" onClick={this.signIn}>Sign In</button>
-      <button className="btn-sm" onClick={this.signOut}>Sign Out</button>
+        <p> User: {this.displayUser(this.props.currentUser)}</p>
+        <button className="btn-sm" onClick={this.signIn}>Sign In</button>
+        <button className="btn-sm" onClick={this.signOut}>Sign Out</button>
       </section>
     );
   }

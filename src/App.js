@@ -6,14 +6,14 @@ import GroceryList from './components/GroceryList.js';
 import ButtonList from './components/ButtonList.js';
 
 
-  var config = {
-    apiKey: "AIzaSyAsAloEkOWRRI644pZs1af4DgagqGKx5zg",
-    authDomain: "shared-groceries.firebaseapp.com",
-    databaseURL: "https://shared-groceries.firebaseio.com",
-    projectId: "shared-groceries",
-    storageBucket: "shared-groceries.appspot.com",
-    messagingSenderId: "271929805627"
-  };
+var config = {
+  apiKey: "AIzaSyAsAloEkOWRRI644pZs1af4DgagqGKx5zg",
+  authDomain: "shared-groceries.firebaseapp.com",
+  databaseURL: "https://shared-groceries.firebaseio.com",
+  projectId: "shared-groceries",
+  storageBucket: "shared-groceries.appspot.com",
+  messagingSenderId: "271929805627"
+};
   firebase.initializeApp(config);
 
 class App extends Component {
@@ -27,26 +27,24 @@ class App extends Component {
   }
 
   setActiveItem=(item)=> {
-    console.log(item.key)
     this.setState({activeItem: item});
   }
 
   setUser=(user)=> {
     if (user === null) {user = 'Guest'}
     this.setState({username: user});
-    console.log(this.state.username)
   }
 
   render() {
     return (
       <div className="App container-fluid">
         <div id="item-list-row" class="row">
-        <div class="col-lg-3 padding-0">
-          <User
-          setUser={this.setUser}
-          currentUser={this.state.username}
-          firebase={firebase}
-          />
+          <div class="col-lg-3 padding-0">
+            <User
+            setUser={this.setUser}
+            currentUser={this.state.username}
+            firebase={firebase}
+            />
           </div>
           <div class="col-lg-9 padding-0">
             <GroceryList
@@ -58,7 +56,6 @@ class App extends Component {
             currentItem={this.state.activeItem}
             firebase={firebase}
             />
-
           </div>
         </div>
       </div>
