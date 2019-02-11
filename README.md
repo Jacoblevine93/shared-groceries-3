@@ -37,3 +37,4 @@ Future Problems to Solve:
 
 - must re-render to show delete
 - would make mobile friendly
+- would add CSS to show that item is marked as purchased
