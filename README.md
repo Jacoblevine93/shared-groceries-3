@@ -36,3 +36,4 @@ Firebase Hosting:
 Future Problems to Solve:
 
 - must re-render to show delete
+- would make mobile friendly

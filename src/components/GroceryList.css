@@ -1,7 +1,17 @@
+#item-list-section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#item-list {
+  text-align: center;
+  padding-top: 0px;
+}
+
 #items {
   cursor: default;
   text-align: middle;
-  padding-left: 20px;
+  padding-left: 0px;
   color: #9ea0a2;
 }
 
@@ -39,9 +49,5 @@ h1 {
 }
 
 #modal-title {
-  text-align: center;
-}
-
-#item-list {
   text-align: center;
 }

@@ -1,5 +1,11 @@
+#button-list-section {
+  padding-top: 20px;
+}
+
 h1 {
   cursor: default;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 form {

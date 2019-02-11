@@ -7,7 +7,6 @@ class ButtonList extends Component {
 
     this.state = {
       newItem: '',
-      purchased: ''
     };
 
   }
@@ -39,7 +38,7 @@ class ButtonList extends Component {
     render() {
       return (
         <section id="button-list-section">
-          <h1>Item Selected: {this.props.currentItem.name}</h1>
+          <h1>Item Selected: <font color="blue">{this.props.currentItem.name}</font></h1>
           <div>
             <button type="button" data-toggle="modal" data-target="#editModal">Edit Name</button>
             <div id="editModal" class="modal fade" role="dialog">
